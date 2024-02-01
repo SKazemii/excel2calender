@@ -9,7 +9,7 @@ MONTH = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August
 EmployeeName = 'Mahshid'#.lower()
 
 
-input_excel_file = r".\shifts.xlsx"
+input_excel_file = ".\shifts.xlsx"
 df = pd.read_excel(input_excel_file, engine='openpyxl', header=None, sheet_name="Enter Projections")
 
 rows, cols = np.where(df == 'Month:') 
