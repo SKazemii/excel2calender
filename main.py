@@ -62,7 +62,7 @@ shift_weekday = np.array(shift_weekday).flatten()
 
 
 
-shift_date = [datetime.datetime.fromordinal(datetime.datetime(1900, 1, 1).toordinal() + excel_date - 2)  for excel_date in shift_date] 
+shift_date = [datetime.datetime.fromordinal(datetime.datetime(1900, 1, 1).toordinal() + excel_date - datetime.timedelta(days=2))  for excel_date in shift_date] 
 
 
 
