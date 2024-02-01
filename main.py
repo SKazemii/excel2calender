@@ -54,9 +54,11 @@ shift_hours = np.array(shift_hours).flatten()
 shift_date = np.array(shift_date).flatten()
 shift_weekday = np.array(shift_weekday).flatten()
 
-for i in range(len(shift_date)):
-    if shift_date[i] < 32:
-        shift_date[i] = shift_date[i-1] +1
+# breakpoint()
+# for i in range(len(shift_date)):
+#     if shift_date[i] < 32:
+#         shift_date[i] = shift_date[i-1] +1
+
 
 
 
@@ -69,20 +71,7 @@ cal = Calendar()
 for index, day in enumerate(shift_date):
         
     employee_name = EmployeeName
-    # if   day>20 and index < 10:
-    #     mon = MONTH.index(month)
-    # elif day<10 and index > 20:
-    #     mon = MONTH.index(month) + 2
-    # else:
-    #     mon = MONTH.index(month) + 1
-    
-    
-    # if mon > 12:
-    #     mon = mon - 12
-    #     YEAR += 1
-    # elif mon == 0:
-    #     mon = 12
-    #     YEAR -= 1
+
 
     if shift_hours[index] in ['X', 'XX', 'XXX', 'nan']:
         continue
