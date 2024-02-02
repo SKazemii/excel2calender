@@ -5,3 +5,5 @@ regex
 icalendar
 
 openpyxl
+
+xlrd

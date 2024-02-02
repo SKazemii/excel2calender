@@ -3,6 +3,8 @@ import numpy as np
 import datetime
 import re
 from icalendar import Calendar, Event
+import xlrd 
+
 
 YEAR = 2024
 MONTH = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
@@ -62,8 +64,8 @@ shift_weekday = np.array(shift_weekday).flatten()
 
 
 # breakpoint()
-shift_date = [datetime.datetime.fromordinal(datetime.datetime(1900, 1, 1).toordinal() + int(excel_date) - 2)  for excel_date in shift_date] 
-
+# shift_date = [datetime.datetime.fromordinal(datetime.datetime(1900, 1, 1).toordinal() + int(excel_date) - 2)  for excel_date in shift_date] 
+shift_date = [xlrd.xldate_as_datetime(excel_date, 0) for excel_date in shift_date] 
 
 
 cal = Calendar()
